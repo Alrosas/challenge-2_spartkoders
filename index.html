@@ -13,71 +13,121 @@
   </head>
   <body>
     <header class="header__container">
-        <nav
-          class="navbar bg-dark border-bottom border-body"
-          data-bs-theme="dark"
-        >
-          <div class="container-fluid">
-            <a class="navbar-brand" href="#">Navbar</a>
-            <button
-              class="navbar-toggler"
-              type="button"
-              data-bs-toggle="collapse"
-              data-bs-target="#navbarSupportedContent"
-              aria-controls="navbarSupportedContent"
-              aria-expanded="false"
-              aria-label="Toggle navigation"
-            >
-              <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarSupportedContent">
-              <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-                <li class="nav-item">
-                  <a class="nav-link active" aria-current="page" href="#">Home</a>
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link" href="#">Link</a>
-                </li>
+      <nav
+        class="navbar bg-dark border-bottom border-body"
+        data-bs-theme="dark"
+      >
+        <div class="container-fluid">
+          <a class="navbar-brand" href="#">Navbar</a>
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="#">Home</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">Link</a>
+              </li>
+            </ul>
+            <form class="d-flex" role="search">
+              <input
+                class="form-control me-2"
+                type="search"
+                placeholder="Search"
+                aria-label="Search"
+              />
+              <button class="btn btn-outline-success" type="submit">
+                Search
+              </button>
+            </form>
+          </div>
+        </div>
+      </nav>
+    </header>
+    <div class="container bg-primary">
+      <div class="row">
+        <aside class="col-3"></aside>
+
+        <!--SECTION MAIN CARD JOEMATZ  -->
+        <main class="posts_container col-6 bg-body-secondary">
+          <nav class="navbar bg-body-secondary">
+            <form class="container-fluid justify-content-start">
+              <button
+                type="button"
+                class="btn btn-outline-dark fw-bold border-0"
+              >
+                Relevant
+              </button>
+              <button type="button" class="btn btn-outline-dark border-0">
+                Latest
+              </button>
+              <button type="button" class="btn btn-outline-dark border-0">
+                Top
+              </button>
+            </form>
+          </nav>
+
+          <div class="card my-2">
+            <img
+              src="https://res.cloudinary.com/practicaldev/image/fetch/s--qy1pKIJ_--/c_imagga_scale,f_auto,fl_progressive,h_420,q_auto,w_1000/https://dev-to-uploads.s3.amazonaws.com/uploads/articles/7dsge1c3u5u0riw2zmqh.jpg"
+              class="card-img-top"
+              alt="..."
+            />
+            <div class="card-body">
+              <p class="m-0">Pierre Bouillon</p>
+              <p class="m-0">Aug 9</p>
+              <h5 class="card-title"><a href="#" class="link-dark text-decoration-none">The Moq-gate: You Either Die a Hero...</a></h5>
+              <!-- <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p> -->
+              <ul class="card__tags d-flex flex-wrap list-unstyled">
+                <li class="card__tag me-2"><a href="https://dev.to/t/discuss" class="btn btn-light btn-sm">#dotnet</a></li>
+                <li class="card__tag me-2"><a href="https://dev.to/t/discuss" class="btn btn-light btn-sm">#chsarp</a></li>
+                <li class="card__tag me-2"><a href="https://dev.to/t/discuss" class="btn btn-light btn-sm">#programming</a></li>
               </ul>
-              <form class="d-flex" role="search">
-                <input
-                  class="form-control me-2"
-                  type="search"
-                  placeholder="Search"
-                  aria-label="Search"
-                />
-                <button class="btn btn-outline-success" type="submit">
-                  Search
-                </button>
-              </form>
+              <ul class="card__reactions_comments d-flex flex-wrap list-unstyled">
+                <li><a href="https://dev.to/t/discuss" class="btn btn-light btn-sm"> 21 reactions</a></li>
+                <li class="d-flex flex-grow-1"><a href="https://dev.to/pbouillon/the-moq-gate-you-either-die-a-hero-8#comments" class="btn btn-light btn-sm">2 comments</a></li>
+                <li>3 min read</li>
+                <li><img src="./images/iconos/icon-tags.svg" alt="">Fav</li>
+              </ul>
             </div>
           </div>
-        </nav>
-      </header>
-    <div class="container bg-primary">
-        <div class="row">
-            <aside class="col-3"></aside>
-            <main class="posts_container col-6">
-                <div class="card">
-                    <img src="https://res.cloudinary.com/practicaldev/image/fetch/s--bi8ayJWG--/c_imagga_scale,f_auto,fl_progressive,h_420,q_auto,w_1000/https://dev-to-uploads.s3.amazonaws.com/uploads/articles/p440p6v0qc709csgk7kj.png" class="card-img-top" alt="...">
-                    <div class="card-body">
-                      <h5 class="card-title">PRUEBA_2 Creating Branch a Sinatra API with system-wide dependency injection using dry-system and rom-rb</h5>
-                      <!-- <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p> -->
-                      <ul class="card__tags d-flex flex-wrap list-unstyled">
-                        <li class="card__tag me-2">#ruby</li>
-                        <li class="card__tag me-2">#programming</li>
-                        <li class="card__tag me-2">#architecture</li>
-                        <li class="card__tag me-2">#sinatra</li>
-                        <li class="card__tag me-2">#bootstrap</li>
-                      </ul>
-                    </div>
-                  </div>
-            </main>
-            <aside class="col-3">aside</aside>
-        </div>
-    </div>
-    
 
+          <div class="card my-2">
+            <img
+              src="https://res.cloudinary.com/practicaldev/image/fetch/s--bi8ayJWG--/c_imagga_scale,f_auto,fl_progressive,h_420,q_auto,w_1000/https://dev-to-uploads.s3.amazonaws.com/uploads/articles/p440p6v0qc709csgk7kj.png"
+              class="card-img-top"
+              alt="..."
+            />
+            <div class="card-body">
+              <h5 class="card-title">
+                PRUEBA_2 Creating Branch a Sinatra API with system-wide
+                dependency injection using dry-system and rom-rb
+              </h5>
+              <!-- <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p> -->
+              <ul class="card__tags d-flex flex-wrap list-unstyled">
+                <li class="card__tag me-2">#ruby</li>
+                <li class="card__tag me-2">#programming</li>
+                <li class="card__tag me-2">#architecture</li>
+                <li class="card__tag me-2">#sinatra</li>
+                <li class="card__tag me-2">#bootstrap</li>
+              </ul>
+            </div>
+          </div>
+        </main>
+        <!--SECTION MAIN CARD JOEMATZ  -->
+        <aside class="col-3">aside</aside>
+      </div>
+    </div>
     <script
       src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"
       integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm"
