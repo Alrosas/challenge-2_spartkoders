@@ -13,43 +13,105 @@
   </head>
   <body>
     <header class="header__container">
-        <nav
-          class="navbar bg-dark border-bottom border-body"
-          data-bs-theme="dark"
-        >
-          <div class="container-fluid">
-            <a class="navbar-brand" href="#">Navbar</a>
-            <button
-              class="navbar-toggler"
-              type="button"
-              data-bs-toggle="collapse"
-              data-bs-target="#navbarSupportedContent"
-              aria-controls="navbarSupportedContent"
-              aria-expanded="false"
-              aria-label="Toggle navigation"
-            >
-              <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarSupportedContent">
-              <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-                <li class="nav-item">
-                  <a class="nav-link active" aria-current="page" href="#">Home</a>
+      <nav
+        class="navbar bg-dark border-bottom border-body"
+        data-bs-theme="dark"
+      >
+        <div class="container-fluid">
+          <a class="navbar-brand" href="#">Navbar</a>
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="#">Home</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">Link</a>
+              </li>
+            </ul>
+            <form class="d-flex" role="search">
+              <input
+                class="form-control me-2"
+                type="search"
+                placeholder="Search"
+                aria-label="Search"
+              />
+              <button class="btn btn-outline-success" type="submit">
+                Search
+              </button>
+            </form>
+          </div>
+        </div>
+      </nav>
+    </header>
+    <div class="container bg-primary">
+      <div class="row">
+        <aside class="col-3"></aside>
+
+        <!--SECTION MAIN CARD JOEMATZ  -->
+        <main class="posts_container col-6 bg-body-secondary">
+          <nav class="navbar bg-body-secondary">
+            <form class="container-fluid justify-content-start">
+              <button type="button" class="btn btn-outline-dark fw-bold border-0">Relevant</button>
+              <button type="button" class="btn btn-outline-dark border-0">Latest</button>
+              <button type="button" class="btn btn-outline-dark border-0">Top</button>
+            </form>
+          </nav>
+
+          <div class="card my-2">
+            <img
+              src="https://res.cloudinary.com/practicaldev/image/fetch/s--qy1pKIJ_--/c_imagga_scale,f_auto,fl_progressive,h_420,q_auto,w_1000/https://dev-to-uploads.s3.amazonaws.com/uploads/articles/7dsge1c3u5u0riw2zmqh.jpg"
+              class="card-img-top"
+              alt="..."
+            />
+            <div class="card-body">
+              <div class="d-flex flex-wrap">
+                <div class="ms-0 me-2">
+                  <img src="./images/image_perfil.webp" class="rounded-circle" style="width:3rem" alt="" />
+                </div>
+                <div class="card_profile d-flex flex-column">
+                  <p class="my-0 fs-5 ">Pierre Bouillon</p>
+                  <p class="fs-6">Aug 9</p>
+                </div>
+              </div>
+              <h5 class="card-title mx-4">
+                <a href="#" class="link-dark link-opacity-75-hover text-decoration-none fs-4"
+                  >The Moq-gate: You Either Die a Hero...</a
+                >
+              </h5>
+              <ul class="card__tags d-flex flex-wrap list-unstyled mx-4">
+                <li class="card__tag me-2">
+                  <a href="https://dev.to/t/discuss" class="btn btn-light btn-sm">#dotnet</a>
                 </li>
-                <li class="nav-item">
-                  <a class="nav-link" href="#">Link</a>
+                <li class="card__tag me-2">
+                  <a href="https://dev.to/t/discuss" class="btn btn-light btn-sm">#chsarp</a>
+                </li>
+                <li class="card__tag me-2">
+                  <a href="https://dev.to/t/discuss" class="btn btn-light btn-sm">#programming</a>
                 </li>
               </ul>
-              <form class="d-flex" role="search">
-                <input
-                  class="form-control me-2"
-                  type="search"
-                  placeholder="Search"
-                  aria-label="Search"
-                />
-                <button class="btn btn-outline-success" type="submit">
-                  Search
-                </button>
-              </form>
+              <ul class="card__reactions_comments d-flex flex-wrap list-unstyled mx-4">
+                <li>
+                  <a href="https://dev.to/t/discuss" class="btn btn-light btn-sm">21 reactions</a>
+                </li>
+                <li class="d-flex flex-grow-1">
+                  <a href="https://dev.to/pbouillon/the-moq-gate-you-either-die-a-hero-8#comments" class="btn btn-light btn-sm">2 comments</a
+                    >
+                  </li>
+                  <li>3 min read</li>
+                  <li class="ms-3"> <a href="./login.html"><img src="./images/bookmark.png" style="width:1rem"/></a></li>
+                </ul>
+              </div>
             </div>
           </div>
         </nav>
@@ -308,13 +370,127 @@
                         <li class="card__tag me-2">#bootstrap</li>
                       </ul>
                     </div>
-                  </div>
-            </main>
-            <aside class="col-3">aside</aside>
-        </div>
-    </div>
-    
 
+
+            <div class="card my-2">
+              <img
+                src="https://res.cloudinary.com/practicaldev/image/fetch/s--_HLsDOeu--/c_imagga_scale,f_auto,fl_progressive,h_420,q_auto,w_1000/https://dev-to-uploads.s3.amazonaws.com/uploads/articles/y2gzqk65o32chuqzlkro.jpg"
+                class="card-img-top"
+                alt="..."
+              />
+              <div class="card-body">
+                <div class="d-flex flex-wrap">
+                  <div class="ms-0 me-2">
+                    <img src="https://res.cloudinary.com/practicaldev/image/fetch/s--f6zfTXuL--/c_fill,f_auto,fl_progressive,h_90,q_auto,w_90/https://dev-to-uploads.s3.amazonaws.com/uploads/organization/profile_image/2476/ebfa3dff-49b2-4ad5-aba1-5cb65c298a44.png" class="rounded-circle" style="width:3rem" alt="" />
+
+                  </div>
+                  <div class="card_profile d-flex flex-column">
+                    <p class="my-0 fs-5 ">Harper DB</p>
+                    <p class="fs-6">Aug 10</p>
+                  </div>
+                </div>
+                <h5 class="card-title mx-4">
+                  <a href="#" class="link-dark link-opacity-75-hover text-decoration-none fs-4"
+                    >8 Ways to Improve Application Performance</a
+                  >
+                </h5>
+                <ul class="card__tags d-flex flex-wrap list-unstyled mx-4">
+                  <li class="card__tag me-2">
+                    <a href="https://dev.to/t/discuss" class="btn btn-light btn-sm">#discuss</a>
+                  </li>
+                  <li class="card__tag me-2">
+                    <a href="https://dev.to/t/discuss" class="btn btn-light btn-sm">#wepdev</a>
+                  </li>
+                  <li class="card__tag me-2">
+                    <a href="https://dev.to/t/discuss" class="btn btn-light btn-sm">#programming</a>
+                  </li>
+                  <li class="card__tag me-2">
+                    <a href="https://dev.to/t/discuss" class="btn btn-light btn-sm">#performance</a>
+                  </li>
+                </ul>
+                <ul class="card__reactions_comments d-flex flex-wrap list-unstyled mx-4">
+                  <li>
+                    <a href="https://dev.to/t/discuss" class="btn btn-light btn-sm">195 reactions</a>
+                  </li>
+                  <li class="d-flex flex-grow-1">
+                    <a href="https://dev.to/pbouillon/the-moq-gate-you-either-die-a-hero-8#comments" class="btn btn-light btn-sm">31 comments</a
+                      >
+                    </li>
+                    <li>7 min read</li>
+                    <li class="ms-3"> <a href="./login.html"><img src="./images/bookmark.png" style="width:1rem"/></a></li>
+                  </ul>
+                </div>
+              </div>
+
+            <div class="card my-2">
+            
+            <div class="card-body">
+              <div class="d-flex flex-wrap">
+                <div class="ms-0 me-2">
+                  <img src="./images/image_perfil.webp" class="rounded-circle" style="width:3rem" alt="" />
+                </div>
+                <div class="card_profile d-flex flex-column">
+                  <p class="my-0 fs-5 ">Pierre Bouillon</p>
+                  <p class="fs-6">Aug 9</p>
+                </div>
+              </div>
+              <h5 class="card-title mx-4">
+                <a href="#" class="link-dark link-opacity-75-hover text-decoration-none fs-4"
+                  >Egoless Programming  </a
+                >
+              </h5>
+              <ul class="card__tags d-flex flex-wrap list-unstyled mx-4">
+                <li class="card__tag me-2">
+                  <a href="https://dev.to/t/discuss" class="btn btn-light btn-sm">#webdev</a>
+                </li>
+                <li class="card__tag me-2">
+                  <a href="https://dev.to/t/discuss" class="btn btn-light btn-sm">#productivity</a>
+                </li>
+                <li class="card__tag me-2">
+                  <a href="https://dev.to/t/discuss" class="btn btn-light btn-sm">#programming</a>
+                </li>
+              </ul>
+              <ul class="card__reactions_comments d-flex flex-wrap list-unstyled mx-4">
+                <li>
+                  <a href="https://dev.to/t/discuss" class="btn btn-light btn-sm">7 reactions</a>
+                </li>
+                <li class="d-flex flex-grow-1">
+                  <a href="https://dev.to/pbouillon/the-moq-gate-you-either-die-a-hero-8#comments" class="btn btn-light btn-sm">3 comments</a
+                    >
+                  </li>
+                  <li>5 min read</li>
+                  <li class="ms-3"> <a href="./login.html"><img src="./images/bookmark.png" style="width:1rem"/></a></li>
+                </ul>
+              </div>
+            </div>
+
+            <div class="card my-2">
+              <img
+                src="https://res.cloudinary.com/practicaldev/image/fetch/s---UXjdvws--/c_limit%2Cf_auto%2Cfl_progressive%2Cq_auto%2Cw_775/https://dev-to-uploads.s3.amazonaws.com/uploads/articles/wixrm7ejmrua4su7agha.jpg"
+                class="card-img-top"
+                alt="..."
+              />
+              <div class="card-body">
+               
+                <h5 class="card-title mx-4">
+                  <a href="#" class="link-dark text-decoration-none fs-4"
+                    >Need to stay up-to-date with the most relevant trends in software, such as generate AI, cloud computing, and all things frontend?</a
+                  >
+                </h5>
+
+                <p class="mx-4">Look no further</p>
+                <p class="mx-4">You can do so much more once you <b>create your account.</b> Follow the devs and topics you care about, and keep up-to-date.</p>
+                             
+                <p class="mx-4"><a href="./login.html" class="link-primary link-opacity-100-hover fw-bolder fs-4">Start now</a></p>
+                <p class="mx-4">Happy coding ❤️</a></p>
+                </div>
+              </div>
+          
+        </main>
+        <!--SECTION MAIN CARD JOEMATZ  -->
+        <aside class="col-3">aside</aside>
+      </div>
+    </div>
     <script
       src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"
       integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm"
