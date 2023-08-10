@@ -13,128 +13,270 @@
   </head>
   <body>
     <header class="header__container">
-        <nav
-          class="navbar bg-dark border-bottom border-body"
-          data-bs-theme="dark"
-        >
-          <div class="container-fluid">
-            <a class="navbar-brand" href="#">Navbar</a>
-            <button
-              class="navbar-toggler"
-              type="button"
-              data-bs-toggle="collapse"
-              data-bs-target="#navbarSupportedContent"
-              aria-controls="navbarSupportedContent"
-              aria-expanded="false"
-              aria-label="Toggle navigation"
-            >
-              <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarSupportedContent">
-              <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-                <li class="nav-item">
-                  <a class="nav-link active" aria-current="page" href="#">Home</a>
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link" href="#">Link</a>
-                </li>
+      <nav
+        class="navbar bg-dark border-bottom border-body"
+        data-bs-theme="dark"
+      >
+        <div class="container-fluid">
+          <a class="navbar-brand" href="#">Navbar</a>
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="#">Home</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">Link</a>
+              </li>
+            </ul>
+            <form class="d-flex" role="search">
+              <input
+                class="form-control me-2"
+                type="search"
+                placeholder="Search"
+                aria-label="Search"
+              />
+              <button class="btn btn-outline-success" type="submit">
+                Search
+              </button>
+            </form>
+          </div>
+        </div>
+      </nav>
+    </header>
+    <div class="container bg-primary">
+      <div class="row">
+        <aside class="col-3"></aside>
+        <main class="posts_container col-6">
+          <div class="card">
+            <img
+              src="https://res.cloudinary.com/practicaldev/image/fetch/s--bi8ayJWG--/c_imagga_scale,f_auto,fl_progressive,h_420,q_auto,w_1000/https://dev-to-uploads.s3.amazonaws.com/uploads/articles/p440p6v0qc709csgk7kj.png"
+              class="card-img-top"
+              alt="..."
+            />
+            <div class="card-body">
+              <h5 class="card-title">
+                Creating a Sinatra API with system-wide dependency injection
+                using dry-system and rom-rb
+              </h5>
+              <!-- <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p> -->
+              <ul class="card__tags d-flex flex-wrap list-unstyled">
+                <li class="card__tag me-2">#ruby</li>
+                <li class="card__tag me-2">#programming</li>
+                <li class="card__tag me-2">#architecture</li>
+                <li class="card__tag me-2">#sinatra</li>
+                <li class="card__tag me-2">#bootstrap</li>
               </ul>
-              <form class="d-flex" role="search">
-                <input
-                  class="form-control me-2"
-                  type="search"
-                  placeholder="Search"
-                  aria-label="Search"
-                />
-                <button class="btn btn-outline-success" type="submit">
-                  Search
-                </button>
-              </form>
             </div>
           </div>
-        </nav>
-      </header>
-    <div class="container bg-primary">
-        <div class="row">
-            <aside class="col-3"></aside>
-            <main class="posts_container col-6">
-                <div class="card">
-                    <img src="https://res.cloudinary.com/practicaldev/image/fetch/s--bi8ayJWG--/c_imagga_scale,f_auto,fl_progressive,h_420,q_auto,w_1000/https://dev-to-uploads.s3.amazonaws.com/uploads/articles/p440p6v0qc709csgk7kj.png" class="card-img-top" alt="...">
-                    <div class="card-body">
-                      <h5 class="card-title">Creating a Sinatra API with system-wide dependency injection using dry-system and rom-rb</h5>
-                      <!-- <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p> -->
-                      <ul class="card__tags d-flex flex-wrap list-unstyled">
-                        <li class="card__tag me-2">#ruby</li>
-                        <li class="card__tag me-2">#programming</li>
-                        <li class="card__tag me-2">#architecture</li>
-                        <li class="card__tag me-2">#sinatra</li>
-                        <li class="card__tag me-2">#bootstrap</li>
-                      </ul>
-                    </div>
+        </main>
+
+        <!-- Contenedor Listings -->
+
+        <aside class="col-3">
+          <div class="card mb-3 mt-3" style="width: 18rem">
+            <ul class="list-group list-group-flush">
+              <li class="list-group-item d-flex justify-content-between">
+                <p class="fw-bold fs-5">Listings</p> 
+                <a href="#">See all</a>
+              </li>
+
+              <li class="list-group-item">
+                <a href="#" class="text-decoration-none">
+                  <div class="text-secondary fs-5">
+                    Supercharge your application's performance: Consuming
+                    Symfony messenger messages with Go
                   </div>
-            </main>
+                  <div class="text-secondary">products</div>
+                </a>
+              </li>
+
+              <li class="list-group-item">
+                <a href="#" class="text-decoration-none">
+                  <div class="text-secondary fs-5">
+                    🚀 Maximizing your IT system's potential: how to identify
+                    and resolve host performance and configuration issues
+                  </div>
+                  <div class="text-secondary">Education</div>
+                </a>
+              </li>
+
+              <li class="list-group-item">
+                <a href="#" class="text-decoration-none">
+                  <div class="text-secondary fs-5">
+                    Contenda Studio: Stretch your content further
+                  </div>
+                  <div class="text-secondary">products</div>
+                </a>
+              </li>
+
+              <li class="list-group-item">
+                <a href="#" class="text-decoration-none">
+                  <div class="text-secondary fs-5">
+                    lessons Learned from a Developer incorporating AI
+                  </div>
+                  <div class="text-secondary">mentors</div>
+                </a>
+              </li>
+
+              <li class="list-group-item">
+                <a href="#" class="text-decoration-none">
+                  <div class="text-secondary fs-5">
+                    DevOps with AWS Champion, Heather luna
+                  </div>
+                  <div class="text-secondary">mentors</div>
+                </a>
+              </li>
+
+              <li class="list-group-item">
+                <a
+                  href="#"
+                  class="text-decoration-none text-secondary text-align"
+                  >Create a list</a
+                >
+              </li>
+            </ul>
+          </div>
+           
+            <!-- Contenedor #discuss -->
+
             <aside class="col-3">
-              <div class="card" style="width: 18rem;">
-
+              <div class="card mb-3" style="width: 18rem">
                 <ul class="list-group list-group-flush">
-
-                  <li class="list-group-item d-flex justify-content-between"> <p class="fw-bold fs-5">Listings</p> <a href="#">See all</a></li>
-
-                  <li class="list-group-item"> <a href="#" class="text-decoration-none">
-
-                    <div class="text-secondary fs-5">
-                      Supercharge your application's performance: Consuming Symfony messenger messages with Go
-                    </div>
-                    <div class="text-secondary">
-                      products
-                    </div>
-                  </a></li>
-
-                  <li class="list-group-item"> <a href="#" class="text-decoration-none">
-                    <div class="text-secondary fs-5">
-                      🚀 Maximizing your IT system's potential: how to identify and resolve host performance and configuration issues
-                    </div>
-                    <div class="text-secondary">
-                      Education
-                    </div>
-                  </a></li>
-
-                  <li class="list-group-item"> <a href="#" class="text-decoration-none">
-                    <div class="text-secondary fs-5">
-                      Contenda Studio: Stretch your content further 
-                    </div>
-                    <div class="text-secondary">
-                      products
-                    </div>
-                  </a></li>
+                  <li class="list-group-item d-flex justify-content-between">
+                    <p class="fw-bold fs-5">#discuss</p>
+                  </li>
                   
-                  <li class="list-group-item"> <a href="#" class="text-decoration-none">
-                    <div class="text-secondary fs-5">
-                      lessons Learned from a Developer incorporating AI 
-                    </div>
-                    <div class="text-secondary">
-                      mentors
-                    </div>
-                  </a></li>
-
-                  <li class="list-group-item"> <a href="#" class="text-decoration-none">
-                    <div class="text-secondary fs-5">
-                      DevOps with AWS Champion, Heather luna 
-                    </div>
-                    <div class="text-secondary">
-                     mentors
-                    </div>
-                  </a></li>
-                  
-                 
-                  <li class="list-group-item"> <a href="#" class="text-decoration-none text-secondary text-align">Create a list</a></li>
-                </ul>
-              </div>
-            </aside>
-          <!-- <aside class="side-bar sidebar-additional showing grid gap-4" id="sidebar-additional"></aside> -->
-        </div>
-    </div>
+                  <li class="list-group-item">
+                    <a href="#" class="text-decoration-none">
+                      <div class="text-secondary fs-5">
+                        Finding Your Coding Habitat: Where Do You Thrive Best? 
+                        <p><a href="#" class="btn btn-warning fw-light p-1 rounded-pill">New</a></p>
+                      </div>
+                      <div class="text-secondary">products</div>
+                    </a>
+                  </li>
     
+                  <li class="list-group-item">
+
+                  
+    
+                    <a href="#" class="text-decoration-none">
+                      <div class="text-secondary fs-5">
+                        
+                      Music Monday — What are you listening to? (Chill Edition II)
+    
+                      </div>
+                      <div class="text-secondary">23 comments</div>
+                    </a>
+                  </li>
+                  <li class="list-group-item">
+                    <a href="#" class="text-decoration-none">
+                      <div class="text-secondary fs-5">
+                        Embarking on a Journey: Joining the Dev Community
+                      </div>
+                      <div class="text-secondary">1 comment</div>
+                    </a>
+                  </li>
+    
+                  <li class="list-group-item">
+                    <a href="#" class="text-decoration-none">
+                      <div class="text-secondary fs-5">
+                        What are Challenges do you face in Writing Technical Articles?
+                      </div>
+                      <div class="text-secondary">3 comments</div>
+                    </a>
+                  </li>
+                        
+                  <!-- Contenedor #watercooler  -->
+<!--                   
+                  <aside class="col-3">
+                    <div class="card mb-3 mt-3" style="width: 18rem">
+                      <ul class="list-group list-group-flush">
+                        <li class="list-group-item d-flex justify-content-between">
+                          <p class="fw-bold fs-5">#watercooler</p>
+                        </li>
+    
+                        
+    
+
+                  <li class="list-group-item">
+                    <a href="#" class="text-decoration-none">
+                      <div class="text-secondary fs-5">
+                        
+                        Music Monday — What are you listening to? (Chill Edition II)
+    
+                      </div>
+                      <div class="text-secondary">23 comments</div>
+                    </a>
+                  </li>
+
+                  <li class="list-group-item">
+                    <a href="#" class="text-decoration-none">
+                      <div class="text-secondary fs-5">
+                        
+                        Meme Monday 
+    
+                      </div>
+                      <div class="text-secondary">53 comments</div>
+                    </a>
+                  </li>
+
+                  <li class="list-group-item">
+                    <a href="#" class="text-decoration-none">
+                      <div class="text-secondary fs-5">
+                        
+                        Caption This!🤔💭
+    
+                      </div>
+                      <div class="text-secondary">11 comments</div>
+                    </a>
+                  </li>
+
+                  <li class="list-group-item">
+                    <a href="#" class="text-decoration-none">
+                      <div class="text-secondary fs-5">
+                        
+                        Rubyist Hangout Thread 
+    
+                      </div>
+                      <div class="text-secondary">1 comment</div>
+                    </a>
+                  </li>
+
+                  <li class="list-group-item">
+                    <a href="#" class="text-decoration-none">
+                      <div class="text-secondary fs-5">
+                        
+                      Which Tech Trends Missed the Mark?
+                    </div>
+                    <div class="text-secondary">4 comments</div>
+                  </a>
+                </li> -->
+
+              </ul>
+            </div>
+          </aside>
+        </div>
+      </div>
+    
+    
+                
+    
+                 
+
+
+      
 
     <script
       src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"
