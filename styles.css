@@ -1,0 +1,24 @@
+body {
+    background-color: rgb(240, 221, 221);
+}
+.header {
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: medium;
+    text-align: center;
+   
+   
+}
+
+.link__container {
+    color: gray;
+    display: block;
+    padding: 1rem;
+    border-bottom: 1px solid rgb(245, 245, 245);
+    text-decoration: none;
+    text-align: center;
+    border: none;
+    background-color: rgb(240, 221, 221);
+    
+    
+
+}
