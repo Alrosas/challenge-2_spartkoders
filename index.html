@@ -62,18 +62,9 @@
         <main class="posts_container col-6 bg-body-secondary">
           <nav class="navbar bg-body-secondary">
             <form class="container-fluid justify-content-start">
-              <button
-                type="button"
-                class="btn btn-outline-dark fw-bold border-0"
-              >
-                Relevant
-              </button>
-              <button type="button" class="btn btn-outline-dark border-0">
-                Latest
-              </button>
-              <button type="button" class="btn btn-outline-dark border-0">
-                Top
-              </button>
+              <button type="button" class="btn btn-outline-dark fw-bold border-0">Relevant</button>
+              <button type="button" class="btn btn-outline-dark border-0">Latest</button>
+              <button type="button" class="btn btn-outline-dark border-0">Top</button>
             </form>
           </nav>
 
@@ -84,20 +75,65 @@
               alt="..."
             />
             <div class="card-body">
-              <p class="m-0">Pierre Bouillon</p>
-              <p class="m-0">Aug 9</p>
-              <h5 class="card-title"><a href="#" class="link-dark text-decoration-none">The Moq-gate: You Either Die a Hero...</a></h5>
-              <!-- <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p> -->
+              <div class="d-flex flex-wrap">
+                <div class="ms-0 me-2">
+                  <img src="./images/image_perfil.webp" class="rounded-circle" style="width:3rem" alt="" />
+                </div>
+                <div class="card_profile d-flex flex-column">
+                  <p class="my-0 fs-5 ">Pierre Bouillon</p>
+                  <p class="fs-6">Aug 9</p>
+                </div>
+              </div>
+
+              <h5 class="card-title">
+                <a href="#" class="link-dark text-decoration-none fs-4"
+                  >The Moq-gate: You Either Die a Hero...</a
+                >
+              </h5>
+
               <ul class="card__tags d-flex flex-wrap list-unstyled">
-                <li class="card__tag me-2"><a href="https://dev.to/t/discuss" class="btn btn-light btn-sm">#dotnet</a></li>
-                <li class="card__tag me-2"><a href="https://dev.to/t/discuss" class="btn btn-light btn-sm">#chsarp</a></li>
-                <li class="card__tag me-2"><a href="https://dev.to/t/discuss" class="btn btn-light btn-sm">#programming</a></li>
+                <li class="card__tag me-2">
+                  <a
+                    href="https://dev.to/t/discuss"
+                    class="btn btn-light btn-sm"
+                    >#dotnet</a
+                  >
+                </li>
+                <li class="card__tag me-2">
+                  <a
+                    href="https://dev.to/t/discuss"
+                    class="btn btn-light btn-sm"
+                    >#chsarp</a
+                  >
+                </li>
+                <li class="card__tag me-2">
+                  <a
+                    href="https://dev.to/t/discuss"
+                    class="btn btn-light btn-sm"
+                    >#programming</a
+                  >
+                </li>
               </ul>
-              <ul class="card__reactions_comments d-flex flex-wrap list-unstyled">
-                <li><a href="https://dev.to/t/discuss" class="btn btn-light btn-sm"> 21 reactions</a></li>
-                <li class="d-flex flex-grow-1"><a href="https://dev.to/pbouillon/the-moq-gate-you-either-die-a-hero-8#comments" class="btn btn-light btn-sm">2 comments</a></li>
+              <ul
+                class="card__reactions_comments d-flex flex-wrap list-unstyled"
+              >
+                <li>
+                  <a
+                    href="https://dev.to/t/discuss"
+                    class="btn btn-light btn-sm"
+                  >
+                    21 reactions</a
+                  >
+                </li>
+                <li class="d-flex flex-grow-1">
+                  <a
+                    href="https://dev.to/pbouillon/the-moq-gate-you-either-die-a-hero-8#comments"
+                    class="btn btn-light btn-sm"
+                    >2 comments</a
+                  >
+                </li>
                 <li>3 min read</li>
-                <li><img src="./images/iconos/icon-tags.svg" alt="">Fav</li>
+                <li><img src="./images/iconos/icon-tags.svg" alt="" />Fav</li>
               </ul>
             </div>
           </div>
