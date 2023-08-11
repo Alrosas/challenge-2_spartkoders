@@ -3,24 +3,19 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Desafio-2</title>
-    <link
-      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css"
-      rel="stylesheet"
-      integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9"
-      crossorigin="anonymous"
-    />
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="https://res.cloudinary.com/practicaldev/image/fetch/s--E8ak4Hr1--/c_limit,f_auto,fl_progressive,q_auto,w_32/https://dev-to.s3.us-east-2.amazonaws.com/favicon.ico">
+    <title>DEV Community</title>
+    <!-- CDN Boostrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+    <!-- Styles -->
   </head>
   <body class="bg-light">
+    <!-- Start Header  -->
     <header class="header__container bg-white sticky-top zindex-sticky">
-      <nav
-        class="navbar navbar-expand-md bg-body-white sticky-top zindex-sticky"
-      >
+      <nav class="navbar navbar-expand-md bg-body-white sticky-top zindex-sticky">
         <div class="container-fluid">
-          <a
-            class="navbar-brand w-40 d-flex justify-content-md-start justify-content-sm-start"
-            href="#"
-          >
+          <a class="navbar-brand w-40 d-flex justify-content-md-start justify-content-sm-start" href="./index.html">
             <img src="images/dev-logo.png" alt="logo" width="50vh" />
           </a>
           <button
@@ -45,16 +40,13 @@
                 />
               </li>
             </ul>
-            <ul class="navbar-nav ms-1 d-flex justify-content-md-end w-50">
+            <ul class="navbar-nav ms-1 d-flex justify-content-md-end w-50">  
               <li class="nav-item me-3">
-                <a class="nav-link" href="#">Log in</a>
+                <a class="nav-link" href="./login.html">Log in</a>
               </li>
               <li class="nav-item">
-                <button
-                  class="btn btn-outline-primary text-primary fw-bold"
-                  type="submit"
-                >
-                  Create account
+                <button class="btn btn-outline-primary text-primary fw-bold" type="submit">
+                  <a href="./singin.html">Create account</a>
                 </button>
               </li>
             </ul>
@@ -62,13 +54,14 @@
         </div>
       </nav>
     </header>
-    <!-- Start Container -->
-    <div class="container">
+    <!-- End Header -->
+    <!-- Start Container Main -->
+    <div class="container mt-3">
       <div class="row">
         <!-- Section Aside 1 -->
         <aside class="col-3 d-none d-md-block m-0 p-0">
           <!-- Dev Community -->
-          <div class="div__community m-2 p-4 bg-white">
+          <div class="div__community m-2 p-4 card">
             <h5 class="community__title mb-4 fw-bold">
               Dev Community is a community of 1,116,774 amazing developers
             </h5>
@@ -867,10 +860,20 @@
                   <a class="aside-1__dev-account" href="">Create An Account on DEV.</a>
                     
                 </div>      -->
+          <!-- Footer aside -->
+          <footer class="mt-6 fs-s sidebar-footer">
+            <p>
+              <a class="c-link c-link--branded fw-medium" aria-label="DEV Community Home" href="/">DEV Community</a>
+          A constructive and inclusive social network for software developers. With you every step of your journey.
+            </p>
+          
+            <p class="mt-4">Built on <a class="c-link c-link--branded" target="_blank" rel="noopener" href="https://www.forem.com">Forem</a> — the <a target="_blank" rel="noopener" class="c-link c-link--branded" href="https://dev.to/t/opensource">open source</a> software that powers <a target="_blank" rel="noopener" class="c-link c-link--branded" href="https://dev.to">DEV</a> and other inclusive communities.</p>
+            <p class="mt-4">Made with love and <a target="_blank" rel="noopener" class="c-link c-link--branded" href="https://dev.to/t/rails">Ruby on Rails</a>. DEV Community <span title="copyright">©</span> 2016 - 2023.</p>
+          </footer>
         </aside>
         <!--SECTION MAIN CARD JOEMATZ  -->
         <main class="posts_container col-6 ">
-          <nav class="navbar bg-body-secondary">
+          <nav class="navbar">
               <form class="container-fluid justify-content-start">
                 <button type="button" class="btn btn-outline-dark fw-bold border-0">Relevant</button>
                 <button type="button" class="btn btn-outline-dark border-0">Latest</button>
