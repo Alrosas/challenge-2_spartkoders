@@ -10,7 +10,7 @@ body {
 }
 
 .link__container {
-    color: gray;
+    color: rgb(49, 48, 48);
     display: block;
     padding: 1rem;
     border-bottom: 1px solid rgb(245, 245, 245);
