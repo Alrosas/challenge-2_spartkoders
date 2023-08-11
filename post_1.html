@@ -1,16 +1,885 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Post 1</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- Favicon -->
+  <link rel="icon" type="image/x-icon" href="https://res.cloudinary.com/practicaldev/image/fetch/s--E8ak4Hr1--/c_limit,f_auto,fl_progressive,q_auto,w_32/https://dev-to.s3.us-east-2.amazonaws.com/favicon.ico">
+  <title>Mastering JavaScript Array Methods - DEV Community</title>
+  <!-- CDN Boostrap -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+  <!-- Styles -->
 </head>
-<body>
-    
+<body class="bg-light">
+  <!-- Start Header  -->
+  <header class="header__container bg-white sticky-top zindex-sticky">
+    <nav class="navbar navbar-expand-md bg-body-white sticky-top zindex-sticky">
+      <div class="container-fluid">
+        <a class="navbar-brand w-40 d-flex justify-content-md-start justify-content-sm-start" href="./index.html">
+          <img src="images/dev-logo.png" alt="logo" width="50vh" />
+        </a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarSupportedContent"
+          aria-controls="navbarSupportedContent"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav w-75 d-flex justify-content-md-start">
+            <li class="nav-item w-75">
+              <input
+                class="form-control me-1 w-10"
+                type="search"
+                placeholder="Search"
+                aria-label="Search"
+              />
+            </li>
+          </ul>
+          <ul class="navbar-nav ms-1 d-flex justify-content-md-end w-50">  
+            <li class="nav-item me-3">
+              <a class="nav-link" href="./login.html">Log in</a>
+            </li>
+            <li class="nav-item">
+              <button class="btn btn-outline-primary text-primary fw-bold" type="submit">
+                <a href="./singin.html">Create account</a>
+              </button>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+  </header>
+  <!-- End Header -->
+  <!-- Start Container Main -->
+  <div class="container mt-3">
+    <div class="row">
+      <aside class="col-1">
+        <ul class="nav flex-column">
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="#">
+              <img src="./images/iconos/icon-heart-plus.svg" alt="Icon heart plus">
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">
+              <img src="./images/iconos/icon-comment.svg" alt="Icon comment">
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">
+              <img src="./images/iconos/icon-crayons.svg" alt="Icon crayons">
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" aria-disabled="true">...</a>
+          </li>
+        </ul>
+      </aside>
+      <main class="col-8">
+        <section class="post__container card">
+          <article class="post">
+            <img src="./images/img-cover-post.webp" class="card-img-top" alt="Image of Post JavaScript Array Methods">
+            <div class="card-body">
+              <div class="flex s:items-start flex-col s:flex-row">
+                <div id="action-space" class="crayons-article__actions mb-4 s:mb-0 s:order-last"></div>
+                <div class="flex flex-1 mb-5 items-start">
+                  <div class="relative">
+                      <a href="/mohitsinghchauhan"><img class="radius-full align-middle" src="https://res.cloudinary.com/practicaldev/image/fetch/s--1iIPiUhM--/c_fill,f_auto,fl_progressive,h_50,q_auto,w_50/https://dev-to-uploads.s3.amazonaws.com/uploads/user/profile_image/537475/3ce201fe-2fbc-4836-9d67-2d22e5cb86de.png" width="40" height="40" alt="MohitSinghChauhan"></a>
+                  </div>
+                  <div class="pl-3 flex-1">
+                    <a href="/mohitsinghchauhan" class="crayons-link fw-bold">MohitSinghChauhan</a>
+                    <p class="fs-xs color-base-60">
+                        Posted on <time datetime="2023-08-04T16:21:51Z" class="date-no-year" title="viernes, 4 de agosto de 2023, 10:21:51">4 ago</time>
+                        • Originally published at <a style="color:#1395b8" href="https://mohitdotexe.hashnode.dev/mastering-javascript-array-methods">mohitdotexe.hashnode.dev</a> 
+                    </p>
+                  </div>
+                  <!-- Reactions -->
+                  <div class="multiple_reactions_engagement">
+                    <span class="reaction_engagement_like">
+                      <img src="https://dev.to/assets/sparkle-heart-5f9bee3767e18deb1bb725290cb151c25234768a0e9a2bd39370c382d02920cf.svg" width="24" height="24">
+                      <span id="reaction_engagement_like_count">7</span>
+                    </span>
+                    <span class="reaction_engagement_unicorn">
+                      <img src="https://dev.to/assets/multi-unicorn-b44d6f8c23cdd00964192bedc38af3e82463978aa611b4365bd33a0f1f4f3e97.svg" width="24" height="24">
+                      <span id="reaction_engagement_unicorn_count">2</span>
+                    </span>
+                    <span class="reaction_engagement_exploding_head">
+                      <img src="https://dev.to/assets/exploding-head-daceb38d627e6ae9b730f36a1e390fca556a4289d5a41abb2c35068ad3e2c4b5.svg" width="24" height="24">
+                      <span id="reaction_engagement_exploding_head_count">2</span>
+                    </span>
+                    <span class="reaction_engagement_raised_hands">
+                      <img src="https://dev.to/assets/raised-hands-74b2099fd66a39f2d7eed9305ee0f4553df0eb7b4f11b01b6b1b499973048fe5.svg" width="24" height="24">
+                      <span id="reaction_engagement_raised_hands_count">3</span>
+                    </span>
+                    <span class="reaction_engagement_fire">
+                      <img src="https://dev.to/assets/fire-f60e7a582391810302117f987b22a8ef04a2fe0df7e3258a5f49332df1cec71e.svg" width="24" height="24">
+                      <span id="reaction_engagement_fire_count">2</span>
+                    </span>
+                </div>
+                  <!-- Title -->
+                  <h1 class="fs-3xl fw-bold mb-2">
+                      Mastering JavaScript Array Methods
+                  </h1>
+                  <!-- hastags -->
+                  <ul class="card__tags d-flex flex-wrap list-unstyled mx-4">
+                    <li class="card__tag me-2">
+                      <a href="https://dev.to/t/discuss" class="btn btn-light btn-sm">#javascript</a>
+                    </li>
+                    <li class="card__tag me-2">
+                      <a href="https://dev.to/t/discuss" class="btn btn-light btn-sm">#beginners</a>
+                    </li>
+                    <li class="card__tag me-2">
+                      <a href="https://dev.to/t/discuss" class="btn btn-light btn-sm">#webdev</a>
+                    </li>
+                    <li class="card__tag me-2">
+                      <a href="https://dev.to/t/discuss" class="btn btn-light btn-sm">tutorial</a>
+                    </li>
+                  </ul>
+                  <!-- body post -->
+                  <div class="crayons-article__main">
 
-
-
+                    <div class="crayons-article__body text-styles spec__body" data-article-id="1559376" id="article-body">
+                      <p>For many developers, arrays are the one data structure to rule them all. Arrays provide an intuitive way to organize ordered information and access it efficiently. But to truly unlock the power of arrays, you need to master the wide range of methods JavaScript provides.</p>
+          
+          <p>JavaScript array methods are like magical incantations for manipulating arrays. With just a few lines of code, you can iterate, sort, map, join, filter, and reduce effortlessly. Forget messy for loops and complicated logic - these methods abstract away the complexity.</p>
+          
+          <p>In this guide, you'll learn array syntax like the back of your hand. We'll explore all the essential methods for wrangling array data. Code examples demonstrate key concepts so you can quickly apply them in your own projects.</p>
+          
+          <p>Take your JavaScript skills to the next level and learn to think like a true master of arrays! With the spells, I mean methods - we'll cover here, arrays will become an invaluable part of your toolbelt. Let's summon some arrays and get started!</p>
+          
+          <h2>
+            <a name="basic-methods" href="#basic-methods">
+            </a>
+            Basic Methods
+          </h2>
+          
+          <p>Let's start with some of the basic methods for manipulating arrays:</p>
+          
+          <h3>
+            <a name="push" href="#push">
+            </a>
+            push()
+          </h3>
+          
+          <p>The <code>push()</code> method appends a new element to the end of an array.<br>
+          </p>
+          
+          <div class="highlight js-code-highlight">
+          <pre class="highlight javascript"><code><span class="kd">let</span> <span class="nx">fruits</span> <span class="o">=</span> <span class="p">[</span><span class="dl">'</span><span class="s1">apple</span><span class="dl">'</span><span class="p">,</span> <span class="dl">'</span><span class="s1">banana</span><span class="dl">'</span><span class="p">];</span>
+          
+          <span class="nx">fruits</span><span class="p">.</span><span class="nx">push</span><span class="p">(</span><span class="dl">'</span><span class="s1">orange</span><span class="dl">'</span><span class="p">);</span> 
+          
+          <span class="c1">// fruits is now ['apple', 'banana', 'orange']</span>
+          </code></pre>
+          <div class="highlight__panel js-actions-panel">
+          <div class="highlight__panel-action js-fullscreen-code-action">
+              <svg xmlns="http://www.w3.org/2000/svg" width="20px" height="20px" viewBox="0 0 24 24" class="highlight-action crayons-icon highlight-action--fullscreen-on"><title>Enter fullscreen mode</title>
+              <path d="M16 3h6v6h-2V5h-4V3zM2 3h6v2H4v4H2V3zm18 16v-4h2v6h-6v-2h4zM4 19h4v2H2v-6h2v4z"></path>
+          </svg>
+          
+              <svg xmlns="http://www.w3.org/2000/svg" width="20px" height="20px" viewBox="0 0 24 24" class="highlight-action crayons-icon highlight-action--fullscreen-off"><title>Exit fullscreen mode</title>
+              <path d="M18 7h4v2h-6V3h2v4zM8 9H2V7h4V3h2v6zm10 8v4h-2v-6h6v2h-4zM8 15v6H6v-4H2v-2h6z"></path>
+          </svg>
+          
+          </div>
+          </div>
+          </div>
+          
+          
+          
+          <h3>
+            <a name="pop" href="#pop">
+            </a>
+            pop()
+          </h3>
+          
+          <p>The <code>pop()</code> method removes the last element of an array.<br>
+          </p>
+          
+          <div class="highlight js-code-highlight">
+          <pre class="highlight javascript"><code><span class="kd">let</span> <span class="nx">fruits</span> <span class="o">=</span> <span class="p">[</span><span class="dl">'</span><span class="s1">apple</span><span class="dl">'</span><span class="p">,</span> <span class="dl">'</span><span class="s1">banana</span><span class="dl">'</span><span class="p">,</span> <span class="dl">'</span><span class="s1">orange</span><span class="dl">'</span><span class="p">];</span>
+          
+          <span class="kd">let</span> <span class="nx">lastFruit</span> <span class="o">=</span> <span class="nx">fruits</span><span class="p">.</span><span class="nx">pop</span><span class="p">();</span> 
+          
+          <span class="c1">// lastFruit is 'orange'</span>
+          <span class="c1">// fruits is now ['apple', 'banana']</span>
+          </code></pre>
+          <div class="highlight__panel js-actions-panel">
+          <div class="highlight__panel-action js-fullscreen-code-action">
+              <svg xmlns="http://www.w3.org/2000/svg" width="20px" height="20px" viewBox="0 0 24 24" class="highlight-action crayons-icon highlight-action--fullscreen-on"><title>Enter fullscreen mode</title>
+              <path d="M16 3h6v6h-2V5h-4V3zM2 3h6v2H4v4H2V3zm18 16v-4h2v6h-6v-2h4zM4 19h4v2H2v-6h2v4z"></path>
+          </svg>
+          
+              <svg xmlns="http://www.w3.org/2000/svg" width="20px" height="20px" viewBox="0 0 24 24" class="highlight-action crayons-icon highlight-action--fullscreen-off"><title>Exit fullscreen mode</title>
+              <path d="M18 7h4v2h-6V3h2v4zM8 9H2V7h4V3h2v6zm10 8v4h-2v-6h6v2h-4zM8 15v6H6v-4H2v-2h6z"></path>
+          </svg>
+          
+          </div>
+          </div>
+          </div>
+          
+          
+          
+          <h3>
+            <a name="unshift" href="#unshift">
+            </a>
+            unshift()
+          </h3>
+          
+          <p>The <code>unshift()</code> method adds a new element to the beginning of an array.<br>
+          </p>
+          
+          <div class="highlight js-code-highlight">
+          <pre class="highlight javascript"><code><span class="kd">let</span> <span class="nx">fruits</span> <span class="o">=</span> <span class="p">[</span><span class="dl">'</span><span class="s1">apple</span><span class="dl">'</span><span class="p">,</span> <span class="dl">'</span><span class="s1">banana</span><span class="dl">'</span><span class="p">];</span>
+          
+          <span class="nx">fruits</span><span class="p">.</span><span class="nx">unshift</span><span class="p">(</span><span class="dl">'</span><span class="s1">strawberry</span><span class="dl">'</span><span class="p">);</span>
+          
+          <span class="c1">// fruits is now ['strawberry', 'apple', 'banana']</span>
+          </code></pre>
+          <div class="highlight__panel js-actions-panel">
+          <div class="highlight__panel-action js-fullscreen-code-action">
+              <svg xmlns="http://www.w3.org/2000/svg" width="20px" height="20px" viewBox="0 0 24 24" class="highlight-action crayons-icon highlight-action--fullscreen-on"><title>Enter fullscreen mode</title>
+              <path d="M16 3h6v6h-2V5h-4V3zM2 3h6v2H4v4H2V3zm18 16v-4h2v6h-6v-2h4zM4 19h4v2H2v-6h2v4z"></path>
+          </svg>
+          
+              <svg xmlns="http://www.w3.org/2000/svg" width="20px" height="20px" viewBox="0 0 24 24" class="highlight-action crayons-icon highlight-action--fullscreen-off"><title>Exit fullscreen mode</title>
+              <path d="M18 7h4v2h-6V3h2v4zM8 9H2V7h4V3h2v6zm10 8v4h-2v-6h6v2h-4zM8 15v6H6v-4H2v-2h6z"></path>
+          </svg>
+          
+          </div>
+          </div>
+          </div>
+          
+          
+          
+          <h3>
+            <a name="shift" href="#shift">
+            </a>
+            shift()
+          </h3>
+          
+          <p>The <code>shift()</code> method removes the first element of an array.<br>
+          </p>
+          
+          <div class="highlight js-code-highlight">
+          <pre class="highlight javascript"><code><span class="kd">let</span> <span class="nx">fruits</span> <span class="o">=</span> <span class="p">[</span><span class="dl">'</span><span class="s1">strawberry</span><span class="dl">'</span><span class="p">,</span> <span class="dl">'</span><span class="s1">apple</span><span class="dl">'</span><span class="p">,</span> <span class="dl">'</span><span class="s1">banana</span><span class="dl">'</span><span class="p">];</span>
+          
+          <span class="kd">let</span> <span class="nx">firstFruit</span> <span class="o">=</span> <span class="nx">fruits</span><span class="p">.</span><span class="nx">shift</span><span class="p">();</span>
+          
+          <span class="c1">// firstFruit is 'strawberry'</span>
+          <span class="c1">// fruits is now ['apple', 'banana']</span>
+          </code></pre>
+          <div class="highlight__panel js-actions-panel">
+          <div class="highlight__panel-action js-fullscreen-code-action">
+              <svg xmlns="http://www.w3.org/2000/svg" width="20px" height="20px" viewBox="0 0 24 24" class="highlight-action crayons-icon highlight-action--fullscreen-on"><title>Enter fullscreen mode</title>
+              <path d="M16 3h6v6h-2V5h-4V3zM2 3h6v2H4v4H2V3zm18 16v-4h2v6h-6v-2h4zM4 19h4v2H2v-6h2v4z"></path>
+          </svg>
+          
+              <svg xmlns="http://www.w3.org/2000/svg" width="20px" height="20px" viewBox="0 0 24 24" class="highlight-action crayons-icon highlight-action--fullscreen-off"><title>Exit fullscreen mode</title>
+              <path d="M18 7h4v2h-6V3h2v4zM8 9H2V7h4V3h2v6zm10 8v4h-2v-6h6v2h-4zM8 15v6H6v-4H2v-2h6z"></path>
+          </svg>
+          
+          </div>
+          </div>
+          </div>
+          
+          
+          
+          <h2>
+            <a name="iteration-methods" href="#iteration-methods">
+            </a>
+            Iteration Methods
+          </h2>
+          
+          <p>Next let's look at methods that iterate over arrays:</p>
+          
+          <h3>
+            <a name="foreach" href="#foreach">
+            </a>
+            forEach()
+          </h3>
+          
+          <p>The <code>forEach()</code> method executes a callback function on each element in an array.<br>
+          </p>
+          
+          <div class="highlight js-code-highlight">
+          <pre class="highlight javascript"><code><span class="kd">let</span> <span class="nx">fruits</span> <span class="o">=</span> <span class="p">[</span><span class="dl">'</span><span class="s1">apple</span><span class="dl">'</span><span class="p">,</span> <span class="dl">'</span><span class="s1">banana</span><span class="dl">'</span><span class="p">,</span> <span class="dl">'</span><span class="s1">orange</span><span class="dl">'</span><span class="p">];</span>
+          
+          <span class="nx">fruits</span><span class="p">.</span><span class="nx">forEach</span><span class="p">(</span><span class="nx">fruit</span> <span class="o">=&gt;</span> <span class="p">{</span>
+            <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">fruit</span><span class="p">);</span>
+          <span class="p">});</span>
+          
+          <span class="c1">// Logs: </span>
+          <span class="c1">// apple</span>
+          <span class="c1">// banana  </span>
+          <span class="c1">// orange</span>
+          </code></pre>
+          <div class="highlight__panel js-actions-panel">
+          <div class="highlight__panel-action js-fullscreen-code-action">
+              <svg xmlns="http://www.w3.org/2000/svg" width="20px" height="20px" viewBox="0 0 24 24" class="highlight-action crayons-icon highlight-action--fullscreen-on"><title>Enter fullscreen mode</title>
+              <path d="M16 3h6v6h-2V5h-4V3zM2 3h6v2H4v4H2V3zm18 16v-4h2v6h-6v-2h4zM4 19h4v2H2v-6h2v4z"></path>
+          </svg>
+          
+              <svg xmlns="http://www.w3.org/2000/svg" width="20px" height="20px" viewBox="0 0 24 24" class="highlight-action crayons-icon highlight-action--fullscreen-off"><title>Exit fullscreen mode</title>
+              <path d="M18 7h4v2h-6V3h2v4zM8 9H2V7h4V3h2v6zm10 8v4h-2v-6h6v2h-4zM8 15v6H6v-4H2v-2h6z"></path>
+          </svg>
+          
+          </div>
+          </div>
+          </div>
+          
+          
+          
+          <h3>
+            <a name="map" href="#map">
+            </a>
+            map()
+          </h3>
+          
+          <p>The <code>map()</code> method returns a new array with the callback function applied to each element.<br>
+          </p>
+          
+          <div class="highlight js-code-highlight">
+          <pre class="highlight javascript"><code><span class="kd">let</span> <span class="nx">numbers</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">];</span> 
+          
+          <span class="kd">let</span> <span class="nx">doubledNumbers</span> <span class="o">=</span> <span class="nx">numbers</span><span class="p">.</span><span class="nx">map</span><span class="p">(</span><span class="nx">n</span> <span class="o">=&gt;</span> <span class="nx">n</span> <span class="o">*</span> <span class="mi">2</span><span class="p">);</span> 
+          
+          <span class="c1">// doubledNumbers is [2, 4, 6]</span>
+          </code></pre>
+          <div class="highlight__panel js-actions-panel">
+          <div class="highlight__panel-action js-fullscreen-code-action">
+              <svg xmlns="http://www.w3.org/2000/svg" width="20px" height="20px" viewBox="0 0 24 24" class="highlight-action crayons-icon highlight-action--fullscreen-on"><title>Enter fullscreen mode</title>
+              <path d="M16 3h6v6h-2V5h-4V3zM2 3h6v2H4v4H2V3zm18 16v-4h2v6h-6v-2h4zM4 19h4v2H2v-6h2v4z"></path>
+          </svg>
+          
+              <svg xmlns="http://www.w3.org/2000/svg" width="20px" height="20px" viewBox="0 0 24 24" class="highlight-action crayons-icon highlight-action--fullscreen-off"><title>Exit fullscreen mode</title>
+              <path d="M18 7h4v2h-6V3h2v4zM8 9H2V7h4V3h2v6zm10 8v4h-2v-6h6v2h-4zM8 15v6H6v-4H2v-2h6z"></path>
+          </svg>
+          
+          </div>
+          </div>
+          </div>
+          
+          
+          
+          <h3>
+            <a name="filter" href="#filter">
+            </a>
+            filter()
+          </h3>
+          
+          <p>The <code>filter()</code> method returns a new array with only elements that pass a condition inside the callback.<br>
+          </p>
+          
+          <div class="highlight js-code-highlight">
+          <pre class="highlight javascript"><code><span class="kd">let</span> <span class="nx">numbers</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">5</span><span class="p">];</span>
+          
+          <span class="kd">let</span> <span class="nx">evens</span> <span class="o">=</span> <span class="nx">numbers</span><span class="p">.</span><span class="nx">filter</span><span class="p">(</span><span class="nx">n</span> <span class="o">=&gt;</span> <span class="nx">n</span> <span class="o">%</span> <span class="mi">2</span> <span class="o">===</span> <span class="mi">0</span><span class="p">);</span>
+          
+          <span class="c1">// evens is [2, 4]</span>
+          </code></pre>
+          <div class="highlight__panel js-actions-panel">
+          <div class="highlight__panel-action js-fullscreen-code-action">
+              <svg xmlns="http://www.w3.org/2000/svg" width="20px" height="20px" viewBox="0 0 24 24" class="highlight-action crayons-icon highlight-action--fullscreen-on"><title>Enter fullscreen mode</title>
+              <path d="M16 3h6v6h-2V5h-4V3zM2 3h6v2H4v4H2V3zm18 16v-4h2v6h-6v-2h4zM4 19h4v2H2v-6h2v4z"></path>
+          </svg>
+          
+              <svg xmlns="http://www.w3.org/2000/svg" width="20px" height="20px" viewBox="0 0 24 24" class="highlight-action crayons-icon highlight-action--fullscreen-off"><title>Exit fullscreen mode</title>
+              <path d="M18 7h4v2h-6V3h2v4zM8 9H2V7h4V3h2v6zm10 8v4h-2v-6h6v2h-4zM8 15v6H6v-4H2v-2h6z"></path>
+          </svg>
+          
+          </div>
+          </div>
+          </div>
+          
+          
+          
+          <h3>
+            <a name="reduce" href="#reduce">
+            </a>
+            reduce()
+          </h3>
+          
+          <p>The <code>reduce()</code> method reduces the array to a single value, by calling the callback on each element.<br>
+          </p>
+          
+          <div class="highlight js-code-highlight">
+          <pre class="highlight javascript"><code><span class="kd">let</span> <span class="nx">numbers</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">5</span><span class="p">];</span>
+          
+          <span class="kd">let</span> <span class="nx">sum</span> <span class="o">=</span> <span class="nx">numbers</span><span class="p">.</span><span class="nx">reduce</span><span class="p">((</span><span class="nx">accumulator</span><span class="p">,</span> <span class="nx">current</span><span class="p">)</span> <span class="o">=&gt;</span> <span class="p">{</span>
+            <span class="k">return</span> <span class="nx">accumulator</span> <span class="o">+</span> <span class="nx">current</span><span class="p">;</span>
+          <span class="p">},</span> <span class="mi">0</span><span class="p">);</span>
+          
+          <span class="c1">// sum is 15</span>
+          </code></pre>
+          <div class="highlight__panel js-actions-panel">
+          <div class="highlight__panel-action js-fullscreen-code-action">
+              <svg xmlns="http://www.w3.org/2000/svg" width="20px" height="20px" viewBox="0 0 24 24" class="highlight-action crayons-icon highlight-action--fullscreen-on"><title>Enter fullscreen mode</title>
+              <path d="M16 3h6v6h-2V5h-4V3zM2 3h6v2H4v4H2V3zm18 16v-4h2v6h-6v-2h4zM4 19h4v2H2v-6h2v4z"></path>
+          </svg>
+          
+              <svg xmlns="http://www.w3.org/2000/svg" width="20px" height="20px" viewBox="0 0 24 24" class="highlight-action crayons-icon highlight-action--fullscreen-off"><title>Exit fullscreen mode</title>
+              <path d="M18 7h4v2h-6V3h2v4zM8 9H2V7h4V3h2v6zm10 8v4h-2v-6h6v2h-4zM8 15v6H6v-4H2v-2h6z"></path>
+          </svg>
+          
+          </div>
+          </div>
+          </div>
+          
+          
+          
+          <h3>
+            <a name="some" href="#some">
+            </a>
+            some()
+          </h3>
+          
+          <p>The <code>some()</code> method returns true if any element in the array passes the condition.<br>
+          </p>
+          
+          <div class="highlight js-code-highlight">
+          <pre class="highlight javascript"><code><span class="kd">let</span> <span class="nx">numbers</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">5</span><span class="p">];</span> 
+          
+          <span class="kd">let</span> <span class="nx">hasEven</span> <span class="o">=</span> <span class="nx">numbers</span><span class="p">.</span><span class="nx">some</span><span class="p">(</span><span class="nx">n</span> <span class="o">=&gt;</span> <span class="nx">n</span> <span class="o">%</span> <span class="mi">2</span> <span class="o">===</span> <span class="mi">0</span><span class="p">);</span>
+          
+          <span class="c1">// hasEven is true</span>
+          </code></pre>
+          <div class="highlight__panel js-actions-panel">
+          <div class="highlight__panel-action js-fullscreen-code-action">
+              <svg xmlns="http://www.w3.org/2000/svg" width="20px" height="20px" viewBox="0 0 24 24" class="highlight-action crayons-icon highlight-action--fullscreen-on"><title>Enter fullscreen mode</title>
+              <path d="M16 3h6v6h-2V5h-4V3zM2 3h6v2H4v4H2V3zm18 16v-4h2v6h-6v-2h4zM4 19h4v2H2v-6h2v4z"></path>
+          </svg>
+          
+              <svg xmlns="http://www.w3.org/2000/svg" width="20px" height="20px" viewBox="0 0 24 24" class="highlight-action crayons-icon highlight-action--fullscreen-off"><title>Exit fullscreen mode</title>
+              <path d="M18 7h4v2h-6V3h2v4zM8 9H2V7h4V3h2v6zm10 8v4h-2v-6h6v2h-4zM8 15v6H6v-4H2v-2h6z"></path>
+          </svg>
+          
+          </div>
+          </div>
+          </div>
+          
+          
+          
+          <h3>
+            <a name="every" href="#every">
+            </a>
+            every()
+          </h3>
+          
+          <p>The <code>every()</code> method returns true only if all elements pass the condition.<br>
+          </p>
+          
+          <div class="highlight js-code-highlight">
+          <pre class="highlight javascript"><code><span class="kd">let</span> <span class="nx">numbers</span> <span class="o">=</span> <span class="p">[</span><span class="mi">2</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">6</span><span class="p">,</span> <span class="mi">8</span><span class="p">];</span>
+          
+          <span class="kd">let</span> <span class="nx">allEven</span> <span class="o">=</span> <span class="nx">numbers</span><span class="p">.</span><span class="nx">every</span><span class="p">(</span><span class="nx">n</span> <span class="o">=&gt;</span> <span class="nx">n</span> <span class="o">%</span> <span class="mi">2</span> <span class="o">===</span> <span class="mi">0</span><span class="p">);</span> 
+          
+          <span class="c1">// allEven is true</span>
+          </code></pre>
+          <div class="highlight__panel js-actions-panel">
+          <div class="highlight__panel-action js-fullscreen-code-action">
+              <svg xmlns="http://www.w3.org/2000/svg" width="20px" height="20px" viewBox="0 0 24 24" class="highlight-action crayons-icon highlight-action--fullscreen-on"><title>Enter fullscreen mode</title>
+              <path d="M16 3h6v6h-2V5h-4V3zM2 3h6v2H4v4H2V3zm18 16v-4h2v6h-6v-2h4zM4 19h4v2H2v-6h2v4z"></path>
+          </svg>
+          
+              <svg xmlns="http://www.w3.org/2000/svg" width="20px" height="20px" viewBox="0 0 24 24" class="highlight-action crayons-icon highlight-action--fullscreen-off"><title>Exit fullscreen mode</title>
+              <path d="M18 7h4v2h-6V3h2v4zM8 9H2V7h4V3h2v6zm10 8v4h-2v-6h6v2h-4zM8 15v6H6v-4H2v-2h6z"></path>
+          </svg>
+          
+          </div>
+          </div>
+          </div>
+          
+          
+          
+          <h3>
+            <a name="find" href="#find">
+            </a>
+            find()
+          </h3>
+          
+          <p>The <code>find()</code> method returns the first element that passes the condition.<br>
+          </p>
+          
+          <div class="highlight js-code-highlight">
+          <pre class="highlight javascript"><code><span class="kd">let</span> <span class="nx">users</span> <span class="o">=</span> <span class="p">[</span>
+            <span class="p">{</span><span class="na">id</span><span class="p">:</span> <span class="mi">1</span><span class="p">,</span> <span class="na">name</span><span class="p">:</span> <span class="dl">'</span><span class="s1">John</span><span class="dl">'</span><span class="p">},</span>
+            <span class="p">{</span><span class="na">id</span><span class="p">:</span> <span class="mi">2</span><span class="p">,</span> <span class="na">name</span><span class="p">:</span> <span class="dl">'</span><span class="s1">Sarah</span><span class="dl">'</span><span class="p">},</span>
+            <span class="p">{</span><span class="na">id</span><span class="p">:</span> <span class="mi">3</span><span class="p">,</span> <span class="na">name</span><span class="p">:</span> <span class="dl">'</span><span class="s1">Mike</span><span class="dl">'</span><span class="p">}</span>
+          <span class="p">];</span>
+          
+          <span class="kd">let</span> <span class="nx">user</span> <span class="o">=</span> <span class="nx">users</span><span class="p">.</span><span class="nx">find</span><span class="p">(</span><span class="nx">user</span> <span class="o">=&gt;</span> <span class="nx">user</span><span class="p">.</span><span class="nx">id</span> <span class="o">===</span> <span class="mi">2</span><span class="p">);</span>
+          
+          <span class="c1">// user is {id: 2, name: 'Sarah'}</span>
+          </code></pre>
+          <div class="highlight__panel js-actions-panel">
+          <div class="highlight__panel-action js-fullscreen-code-action">
+              <svg xmlns="http://www.w3.org/2000/svg" width="20px" height="20px" viewBox="0 0 24 24" class="highlight-action crayons-icon highlight-action--fullscreen-on"><title>Enter fullscreen mode</title>
+              <path d="M16 3h6v6h-2V5h-4V3zM2 3h6v2H4v4H2V3zm18 16v-4h2v6h-6v-2h4zM4 19h4v2H2v-6h2v4z"></path>
+          </svg>
+          
+              <svg xmlns="http://www.w3.org/2000/svg" width="20px" height="20px" viewBox="0 0 24 24" class="highlight-action crayons-icon highlight-action--fullscreen-off"><title>Exit fullscreen mode</title>
+              <path d="M18 7h4v2h-6V3h2v4zM8 9H2V7h4V3h2v6zm10 8v4h-2v-6h6v2h-4zM8 15v6H6v-4H2v-2h6z"></path>
+          </svg>
+          
+          </div>
+          </div>
+          </div>
+          
+          
+          
+          <h3>
+            <a name="findindex" href="#findindex">
+            </a>
+            findIndex()
+          </h3>
+          
+          <p>The <code>findIndex()</code> method returns the index of the first element that passes the condition.<br>
+          </p>
+          
+          <div class="highlight js-code-highlight">
+          <pre class="highlight javascript"><code><span class="kd">let</span> <span class="nx">users</span> <span class="o">=</span> <span class="p">[</span>
+            <span class="p">{</span><span class="na">id</span><span class="p">:</span> <span class="mi">1</span><span class="p">,</span> <span class="na">name</span><span class="p">:</span> <span class="dl">'</span><span class="s1">John</span><span class="dl">'</span><span class="p">},</span>
+            <span class="p">{</span><span class="na">id</span><span class="p">:</span> <span class="mi">2</span><span class="p">,</span> <span class="na">name</span><span class="p">:</span> <span class="dl">'</span><span class="s1">Sarah</span><span class="dl">'</span><span class="p">},</span>
+            <span class="p">{</span><span class="na">id</span><span class="p">:</span> <span class="mi">3</span><span class="p">,</span> <span class="na">name</span><span class="p">:</span> <span class="dl">'</span><span class="s1">Mike</span><span class="dl">'</span><span class="p">}</span>  
+          <span class="p">];</span>
+          
+          <span class="kd">let</span> <span class="nx">index</span> <span class="o">=</span> <span class="nx">users</span><span class="p">.</span><span class="nx">findIndex</span><span class="p">(</span><span class="nx">user</span> <span class="o">=&gt;</span> <span class="nx">user</span><span class="p">.</span><span class="nx">id</span> <span class="o">===</span> <span class="mi">2</span><span class="p">);</span>
+          
+          <span class="c1">// index is 1</span>
+          </code></pre>
+          <div class="highlight__panel js-actions-panel">
+          <div class="highlight__panel-action js-fullscreen-code-action">
+              <svg xmlns="http://www.w3.org/2000/svg" width="20px" height="20px" viewBox="0 0 24 24" class="highlight-action crayons-icon highlight-action--fullscreen-on"><title>Enter fullscreen mode</title>
+              <path d="M16 3h6v6h-2V5h-4V3zM2 3h6v2H4v4H2V3zm18 16v-4h2v6h-6v-2h4zM4 19h4v2H2v-6h2v4z"></path>
+          </svg>
+          
+              <svg xmlns="http://www.w3.org/2000/svg" width="20px" height="20px" viewBox="0 0 24 24" class="highlight-action crayons-icon highlight-action--fullscreen-off"><title>Exit fullscreen mode</title>
+              <path d="M18 7h4v2h-6V3h2v4zM8 9H2V7h4V3h2v6zm10 8v4h-2v-6h6v2h-4zM8 15v6H6v-4H2v-2h6z"></path>
+          </svg>
+          
+          </div>
+          </div>
+          </div>
+          
+          
+          
+          <h2>
+            <a name="joining-and-splitting" href="#joining-and-splitting">
+            </a>
+            Joining and Splitting
+          </h2>
+          
+          <p>There are also useful methods for joining and splitting arrays:</p>
+          
+          <h3>
+            <a name="join" href="#join">
+            </a>
+            join()
+          </h3>
+          
+          <p>The <code>join()</code> method creates a string from array elements, separated by a delimiter.<br>
+          </p>
+          
+          <div class="highlight js-code-highlight">
+          <pre class="highlight javascript"><code><span class="kd">let</span> <span class="nx">fruits</span> <span class="o">=</span> <span class="p">[</span><span class="dl">'</span><span class="s1">apple</span><span class="dl">'</span><span class="p">,</span> <span class="dl">'</span><span class="s1">banana</span><span class="dl">'</span><span class="p">,</span> <span class="dl">'</span><span class="s1">orange</span><span class="dl">'</span><span class="p">];</span>
+          
+          <span class="kd">let</span> <span class="nx">fruitString</span> <span class="o">=</span> <span class="nx">fruits</span><span class="p">.</span><span class="nx">join</span><span class="p">(</span><span class="dl">'</span><span class="s1"> and </span><span class="dl">'</span><span class="p">);</span> 
+          
+          <span class="c1">// fruitString is 'apple and banana and orange'</span>
+          </code></pre>
+          <div class="highlight__panel js-actions-panel">
+          <div class="highlight__panel-action js-fullscreen-code-action">
+              <svg xmlns="http://www.w3.org/2000/svg" width="20px" height="20px" viewBox="0 0 24 24" class="highlight-action crayons-icon highlight-action--fullscreen-on"><title>Enter fullscreen mode</title>
+              <path d="M16 3h6v6h-2V5h-4V3zM2 3h6v2H4v4H2V3zm18 16v-4h2v6h-6v-2h4zM4 19h4v2H2v-6h2v4z"></path>
+          </svg>
+          
+              <svg xmlns="http://www.w3.org/2000/svg" width="20px" height="20px" viewBox="0 0 24 24" class="highlight-action crayons-icon highlight-action--fullscreen-off"><title>Exit fullscreen mode</title>
+              <path d="M18 7h4v2h-6V3h2v4zM8 9H2V7h4V3h2v6zm10 8v4h-2v-6h6v2h-4zM8 15v6H6v-4H2v-2h6z"></path>
+          </svg>
+          
+          </div>
+          </div>
+          </div>
+          
+          
+          
+          <h3>
+            <a name="split" href="#split">
+            </a>
+            split()
+          </h3>
+          
+          <p>The <code>split()</code> method splits a string into an array based on a delimiter.<br>
+          </p>
+          
+          <div class="highlight js-code-highlight">
+          <pre class="highlight javascript"><code><span class="kd">let</span> <span class="nx">fruitString</span> <span class="o">=</span> <span class="dl">'</span><span class="s1">apple, banana, orange</span><span class="dl">'</span><span class="p">;</span>
+          
+          <span class="kd">let</span> <span class="nx">fruits</span> <span class="o">=</span> <span class="nx">fruitString</span><span class="p">.</span><span class="nx">split</span><span class="p">(</span><span class="dl">'</span><span class="s1">, </span><span class="dl">'</span><span class="p">);</span>
+          
+          <span class="c1">// fruits is ['apple', 'banana', 'orange']</span>
+          </code></pre>
+          <div class="highlight__panel js-actions-panel">
+          <div class="highlight__panel-action js-fullscreen-code-action">
+              <svg xmlns="http://www.w3.org/2000/svg" width="20px" height="20px" viewBox="0 0 24 24" class="highlight-action crayons-icon highlight-action--fullscreen-on"><title>Enter fullscreen mode</title>
+              <path d="M16 3h6v6h-2V5h-4V3zM2 3h6v2H4v4H2V3zm18 16v-4h2v6h-6v-2h4zM4 19h4v2H2v-6h2v4z"></path>
+          </svg>
+          
+              <svg xmlns="http://www.w3.org/2000/svg" width="20px" height="20px" viewBox="0 0 24 24" class="highlight-action crayons-icon highlight-action--fullscreen-off"><title>Exit fullscreen mode</title>
+              <path d="M18 7h4v2h-6V3h2v4zM8 9H2V7h4V3h2v6zm10 8v4h-2v-6h6v2h-4zM8 15v6H6v-4H2v-2h6z"></path>
+          </svg>
+          
+          </div>
+          </div>
+          </div>
+          
+          
+          
+          <h2>
+            <a name="other-helpful-methods" href="#other-helpful-methods">
+            </a>
+            Other Helpful Methods
+          </h2>
+          
+          <p>Here are a few more handy methods:</p>
+          
+          <h3>
+            <a name="slice" href="#slice">
+            </a>
+            slice()
+          </h3>
+          
+          <p>The <code>slice()</code> method returns a shallow copy of a portion of an array.<br>
+          </p>
+          
+          <div class="highlight js-code-highlight">
+          <pre class="highlight javascript"><code><span class="kd">let</span> <span class="nx">fruits</span> <span class="o">=</span> <span class="p">[</span><span class="dl">'</span><span class="s1">apple</span><span class="dl">'</span><span class="p">,</span> <span class="dl">'</span><span class="s1">banana</span><span class="dl">'</span><span class="p">,</span> <span class="dl">'</span><span class="s1">orange</span><span class="dl">'</span><span class="p">,</span> <span class="dl">'</span><span class="s1">grapes</span><span class="dl">'</span><span class="p">];</span>
+          
+          <span class="kd">let</span> <span class="nx">citrus</span> <span class="o">=</span> <span class="nx">fruits</span><span class="p">.</span><span class="nx">slice</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">3</span><span class="p">);</span>
+          
+          <span class="c1">// citrus is ['banana', 'orange']</span>
+          </code></pre>
+          <div class="highlight__panel js-actions-panel">
+          <div class="highlight__panel-action js-fullscreen-code-action">
+              <svg xmlns="http://www.w3.org/2000/svg" width="20px" height="20px" viewBox="0 0 24 24" class="highlight-action crayons-icon highlight-action--fullscreen-on"><title>Enter fullscreen mode</title>
+              <path d="M16 3h6v6h-2V5h-4V3zM2 3h6v2H4v4H2V3zm18 16v-4h2v6h-6v-2h4zM4 19h4v2H2v-6h2v4z"></path>
+          </svg>
+          
+              <svg xmlns="http://www.w3.org/2000/svg" width="20px" height="20px" viewBox="0 0 24 24" class="highlight-action crayons-icon highlight-action--fullscreen-off"><title>Exit fullscreen mode</title>
+              <path d="M18 7h4v2h-6V3h2v4zM8 9H2V7h4V3h2v6zm10 8v4h-2v-6h6v2h-4zM8 15v6H6v-4H2v-2h6z"></path>
+          </svg>
+          
+          </div>
+          </div>
+          </div>
+          
+          
+          
+          <h3>
+            <a name="splice" href="#splice">
+            </a>
+            splice()
+          </h3>
+          
+          <p>The <code>splice()</code> method changes the contents of an array by removing and/or adding elements.<br>
+          </p>
+          
+          <div class="highlight js-code-highlight">
+          <pre class="highlight javascript"><code><span class="kd">let</span> <span class="nx">fruits</span> <span class="o">=</span> <span class="p">[</span><span class="dl">'</span><span class="s1">apple</span><span class="dl">'</span><span class="p">,</span> <span class="dl">'</span><span class="s1">banana</span><span class="dl">'</span><span class="p">,</span> <span class="dl">'</span><span class="s1">orange</span><span class="dl">'</span><span class="p">,</span> <span class="dl">'</span><span class="s1">grapes</span><span class="dl">'</span><span class="p">];</span>
+          
+          <span class="nx">fruits</span><span class="p">.</span><span class="nx">splice</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="dl">'</span><span class="s1">cherry</span><span class="dl">'</span><span class="p">);</span>
+          
+          <span class="c1">// fruits is now ['apple', 'banana', 'cherry', 'grapes']</span>
+          </code></pre>
+          <div class="highlight__panel js-actions-panel">
+          <div class="highlight__panel-action js-fullscreen-code-action">
+              <svg xmlns="http://www.w3.org/2000/svg" width="20px" height="20px" viewBox="0 0 24 24" class="highlight-action crayons-icon highlight-action--fullscreen-on"><title>Enter fullscreen mode</title>
+              <path d="M16 3h6v6h-2V5h-4V3zM2 3h6v2H4v4H2V3zm18 16v-4h2v6h-6v-2h4zM4 19h4v2H2v-6h2v4z"></path>
+          </svg>
+          
+              <svg xmlns="http://www.w3.org/2000/svg" width="20px" height="20px" viewBox="0 0 24 24" class="highlight-action crayons-icon highlight-action--fullscreen-off"><title>Exit fullscreen mode</title>
+              <path d="M18 7h4v2h-6V3h2v4zM8 9H2V7h4V3h2v6zm10 8v4h-2v-6h6v2h-4zM8 15v6H6v-4H2v-2h6z"></path>
+          </svg>
+          
+          </div>
+          </div>
+          </div>
+          
+          
+          
+          <h3>
+            <a name="concat" href="#concat">
+            </a>
+            concat()
+          </h3>
+          
+          <p>The <code>concat()</code> method merges two or more arrays together.<br>
+          </p>
+          
+          <div class="highlight js-code-highlight">
+          <pre class="highlight javascript"><code><span class="kd">let</span> <span class="nx">fruits</span> <span class="o">=</span> <span class="p">[</span><span class="dl">'</span><span class="s1">apple</span><span class="dl">'</span><span class="p">,</span> <span class="dl">'</span><span class="s1">banana</span><span class="dl">'</span><span class="p">];</span>
+          <span class="kd">let</span> <span class="nx">citrus</span> <span class="o">=</span> <span class="p">[</span><span class="dl">'</span><span class="s1">orange</span><span class="dl">'</span><span class="p">,</span> <span class="dl">'</span><span class="s1">lemon</span><span class="dl">'</span><span class="p">];</span>
+          
+          <span class="kd">let</span> <span class="nx">produce</span> <span class="o">=</span> <span class="nx">fruits</span><span class="p">.</span><span class="nx">concat</span><span class="p">(</span><span class="nx">citrus</span><span class="p">);</span> 
+          
+          <span class="c1">// produce is ['apple', 'banana', 'orange', 'lemon']</span>
+          </code></pre>
+          <div class="highlight__panel js-actions-panel">
+          <div class="highlight__panel-action js-fullscreen-code-action">
+              <svg xmlns="http://www.w3.org/2000/svg" width="20px" height="20px" viewBox="0 0 24 24" class="highlight-action crayons-icon highlight-action--fullscreen-on"><title>Enter fullscreen mode</title>
+              <path d="M16 3h6v6h-2V5h-4V3zM2 3h6v2H4v4H2V3zm18 16v-4h2v6h-6v-2h4zM4 19h4v2H2v-6h2v4z"></path>
+          </svg>
+          
+              <svg xmlns="http://www.w3.org/2000/svg" width="20px" height="20px" viewBox="0 0 24 24" class="highlight-action crayons-icon highlight-action--fullscreen-off"><title>Exit fullscreen mode</title>
+              <path d="M18 7h4v2h-6V3h2v4zM8 9H2V7h4V3h2v6zm10 8v4h-2v-6h6v2h-4zM8 15v6H6v-4H2v-2h6z"></path>
+          </svg>
+          
+          </div>
+          </div>
+          </div>
+          
+          
+          
+          <h3>
+            <a name="includes" href="#includes">
+            </a>
+            includes()
+          </h3>
+          
+          <p>The <code>includes()</code> method checks if an array contains a value. Returns true or false.<br>
+          </p>
+          
+          <div class="highlight js-code-highlight">
+          <pre class="highlight javascript"><code><span class="kd">let</span> <span class="nx">fruits</span> <span class="o">=</span> <span class="p">[</span><span class="dl">'</span><span class="s1">apple</span><span class="dl">'</span><span class="p">,</span> <span class="dl">'</span><span class="s1">banana</span><span class="dl">'</span><span class="p">,</span> <span class="dl">'</span><span class="s1">orange</span><span class="dl">'</span><span class="p">];</span>
+          
+          <span class="kd">let</span> <span class="nx">hasApple</span> <span class="o">=</span> <span class="nx">fruits</span><span class="p">.</span><span class="nx">includes</span><span class="p">(</span><span class="dl">'</span><span class="s1">apple</span><span class="dl">'</span><span class="p">);</span> 
+          
+          <span class="c1">// hasApple is true</span>
+          </code></pre>
+          <div class="highlight__panel js-actions-panel">
+          <div class="highlight__panel-action js-fullscreen-code-action">
+              <svg xmlns="http://www.w3.org/2000/svg" width="20px" height="20px" viewBox="0 0 24 24" class="highlight-action crayons-icon highlight-action--fullscreen-on"><title>Enter fullscreen mode</title>
+              <path d="M16 3h6v6h-2V5h-4V3zM2 3h6v2H4v4H2V3zm18 16v-4h2v6h-6v-2h4zM4 19h4v2H2v-6h2v4z"></path>
+          </svg>
+          
+              <svg xmlns="http://www.w3.org/2000/svg" width="20px" height="20px" viewBox="0 0 24 24" class="highlight-action crayons-icon highlight-action--fullscreen-off"><title>Exit fullscreen mode</title>
+              <path d="M18 7h4v2h-6V3h2v4zM8 9H2V7h4V3h2v6zm10 8v4h-2v-6h6v2h-4zM8 15v6H6v-4H2v-2h6z"></path>
+          </svg>
+          
+          </div>
+          </div>
+          </div>
+          
+          
+          
+          <h2>
+            <a name="easter-eggs" href="#easter-eggs">
+            </a>
+            Easter Eggs
+          </h2>
+          
+          <p>Here are some array method tips that could come in handy:</p>
+          
+          <ul>
+          <li><p>Use <code>map()</code> instead of a for loop to avoid mutating the original array.</p></li>
+          <li><p><code>filter()</code> can be used to remove null, undefined and false values from an array.</p></li>
+          <li><p><code>some()</code> is short-circuiting - it stops iterating once it finds a match.</p></li>
+          <li><p><code>every()</code> is short-circuiting - it stops iterating once it finds a non-match.</p></li>
+          <li><p><code>reduce()</code> can be used to flatten nested arrays.</p></li>
+          </ul>
+          
+          <h2>
+            <a name="conclusion" href="#conclusion">
+            </a>
+            Conclusion
+          </h2>
+          
+          <p>And there you have it - everything you need to know about JavaScript array methods! From joining strings to filtering data, these methods unlock the real power of arrays.</p>
+          
+          <p>The key is to understand what each method does, and when to reach for it. Memorize this guide, play around with some examples, and arrays will become second nature. Soon you'll be able to refactor chunks of code into neat one-liners with methods like map, filter and reduce.</p>
+          
+          <p>Mastering arrays is a milestone for any JavaScript developer. Use this guide as your reference whenever you need to manipulate ordered data. And just think - when you nail those array interview questions.</p>
+          
+          <p>Don't forget to checkout my other blogs to become JS Wizard :) , I'll start JS Series soon to share more in-depth knowledge on JAVASCRIPT, Till then</p>
+          
+          <p>Thanks for reading<br><br>
+          Happy Coding ❤️</p>
+          
+          
+                    </div>
+          
+                  </div>
+                </div>
+              </div>
+            </div>
+          </article>
+          <hr />
+          <article class="comments">
+            <div class="comments__title d-flex justify-content-around">
+              <h2>Top comments (11)</h2>
+              <button class="btn btn-outline-ligth">Subscribe</button>
+            </div>
+          </article>
+        </section>
+        <!-- Start Section Dev Community -->
+        <section class="dev-community__container card mt-3">
+          <h2>DEV Author Spotlight</h2>
+        </section>
+        <!-- Start Section Read next -->
+        <section class="read-next__container card mt-3">
+          <h2>Read next</h2>
+        </section>
+      </main>
+      <aside class="col-3">
+        <!-- Start card author post -->
+        <div class="card">
+          <div>
+            <img src="./images/avatars/imge-perfil-post.webp" alt="Image avatar author post">
+            <span>MohitSinghChauhan</span>
+          </div>
+          <buttton class="btn btn-primary mt-5">
+            Follow
+          </buttton>
+        </div>
+      </aside>
+    </div>
+    <!-- Start Footer -->
+    <footer class="container-fluid text-center mt-5 mb-5">
+      <div class="row-5 text-black">
+        <div class="xs-12 md-6 slg-1">
+            <p> <a href="#">DEV Community </a>-- A constructive and inclusive social network for software developers. With you every step of your journey.</p>
+                <ul class="d-flex flex-row justify-content-center  mb-1 px-1">
+                    <li class="mx-3"><a class="text black text-decoration-none" href="#">Home</a></li>
+                    <li class="mx-3"><a class="text black text-decoration-none" href="#">Listings</a></li>
+                    <li class="mx-3"><a class="text black text-decoration-none" href="#">Podcasts</a></li>
+                    <li class="mx-3"><a class="text black text-decoration-none" href="#">Videos</a></li>
+                    <li class="mx-3"><a class="text black text-decoration-none" href="#">Tags</a></li>
+                    <li class="mx-3"><a class="text black text-decoration-none" href="#">FAQ</a></li>
+                    <li class="mx-3"><a class="text black text-decoration-none" href="#">Forem Shop</a></li>
+                    <li class="mx-3"><a class="text black text-decoration-none" href="#">Advertise on DEV</a></li>
+                    <li class="mx-3"><a class="text black text-decoration-none" href="#">About</a></li>
+                    <li class="mx-3"><a class="text black text-decoration-none" href="#">Contact</a></li>
+                    <li class="mx-3"><a class="text black text-decoration-none" href="#">Guides</a></li>
+                    <li class="mx-3"><a class="text black text-decoration-none" href="#">Software comparisons</a></li>
+                </ul>
+             <ul class="d-flex flex-row justify-content-center  mb-1 px-1">
+                 <li class="mx-3"><a class="text black text-decoration-none" href="#">Code of Conduct</a></li>
+                 <li class="mx-3"><a class="text black text-decoration-none" href="#">Privacy Policy</a></li>
+                 <li class="mx-3"><a class="text black text-decoration-none" href="#">Term of use</a></li>
+             </ul>
+             <p>Built on <a class="text blue text text-decoration-none" href="#">Forem</a> — the <a class="text blue text text-decoration-none" href="#">open surce</a> software that powers <a class="text blue text text-decoration-none" href="#">DEV</a> and other inclusive communities.</p>
+             <p>Made with love and <a class="text blue text text-decoration-none" href="#">Ruby on Rails.</a> DEV Community © 2016 - 2023.</p>
+        </div>
+      </div>
+    </footer>
+    <!-- End Footer -->
+    <!-- Script Bootstrap -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm" crossorigin="anonymous"></script>
-</body>
+  </body>
 </html>
